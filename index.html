@@ -12,9 +12,11 @@
       <a class="logo">
         Техномарт
       </a>
-      <label for="">Поиск
-        <input type="text" class="search">
-      </label>
+      <form class="main-header__search">
+        <label for="search-input">Поиск
+          <input type="text" id="search-input" class="main-header__search-input">
+        </label>
+      </form>
       <a href="#" class="main-header__bookmarks">
         Закладки 0
       </a>
@@ -100,7 +102,7 @@
             Перфораторы
             <span>Настоящие мужские игрушки</span>
           </p>
-          <img src="img/slider/Перфораторы.png" width="620" height="266" alt="Перфораторы">
+          <img src="img/slider/Перфораторы.jpg" width="620" height="266" alt="Перфораторы">
           <a href="#" class="slider__slide-button">Открыть каталог</a>
         </li>
       </ul>
@@ -135,7 +137,7 @@
         </li>
         <li class="item-info">
           <div class="item-info__main">
-            <img src="img/goods/bosh-bfg-3000.jpg" width="220" height="159" alt="BOSCH BFG 3000" class="item-info__pic">
+            <img src="img/goods/bosch-bfg-3000.jpg" width="220" height="159" alt="BOSCH BFG 3000" class="item-info__pic">
             <h3>Перфоратор BOSCH BFG 3000</h3>
             <del class="item-info__old-price">22 500р</del>
             <span class="item-info__price">15 500р</span>
@@ -147,7 +149,7 @@
         </li>
         <li class="item-info">
           <div class="item-info__main">
-            <img src="img/goods/bosh-bfg-6000.jpg" width="220" height="159" alt="BOSCH BFG 6000" class="item-info__pic">
+            <img src="img/goods/bosch-bfg-6000.jpg" width="220" height="159" alt="BOSCH BFG 6000" class="item-info__pic">
             <h3>Перфоратор BOSCH BFG 6000</h3>
             <del class="item-info__old-price">30 500р</del>
             <span class="item-info__price">25 500р</span>
@@ -159,7 +161,7 @@
         </li>
         <li class="item-info">
           <div class="item-info__main">
-            <img src="img/goods/bosh-bfg-2000.jpg" width="220" height="159" alt="BOSCH BFG 2000" class="item-info__pic">
+            <img src="img/goods/bosch-bfg-2000.jpg" width="220" height="159" alt="BOSCH BFG 2000" class="item-info__pic">
             <h3>Перфоратор BOSCH BFG 2000</h3>
             <span class="item-info__price">12 500р</span>
           </div>
@@ -178,42 +180,42 @@
       <ul class="popular-producers__list">
         <li class="popular-producers__list-item">
           <a href="#">
-            <img src="img/producers/Bosch.jpg" width="122" height="32" alt="Bosch">
+            <img src="img/producers/Bosch.png" width="122" height="32" alt="Bosch">
           </a>
         </li>
         <li class="popular-producers__list-item">
           <a href="#">
-            <img src="img/producers/Makita.jpg" width="123" height="40" alt="Makita">
+            <img src="img/producers/Makita.png" width="123" height="40" alt="Makita">
           </a>
         </li>
         <li class="popular-producers__list-item">
           <a href="#">
-            <img src="img/producers/Dewalt.jpg" width="146" height="44" alt="Dewalt">
+            <img src="img/producers/Dewalt.png" width="146" height="44" alt="Dewalt">
           </a>
         </li>
         <li class="popular-producers__list-item">
           <a href="#">
-           <img src="img/producers/Интерскол.jpg" width="184" height="32" alt="Интерскол">
+           <img src="img/producers/Интерскол.png" width="184" height="32" alt="Интерскол">
           </a>
         </li>
         <li class="popular-producers__list-item">
           <a href="#">
-            <img src="img/producers/Hitachi.jpg" width="143" height="22" alt="Hitachi">
+            <img src="img/producers/Hitachi.png" width="143" height="22" alt="Hitachi">
           </a>
         </li>
         <li class="popular-producers__list-item">
           <a href="#">
-            <img src="img/producers/Lg.jpg" width="121" height="73" alt="Lg">
+            <img src="img/producers/Lg.png" width="121" height="73" alt="Lg">
           </a>
         </li>
         <li class="popular-producers__list-item">
           <a href="#">
-            <img src="img/producers/Aeg.jpg" width="151" height="84" alt="Aeg power solutions">
+            <img src="img/producers/Aeg.png" width="151" height="84" alt="Aeg power solutions">
           </a>
         </li>
         <li class="popular-producers__list-item">
           <a href="#">
-            <img src="img/producers/Metabo.jpg" width="155" height="55" alt="Metabo work. don't play">
+            <img src="img/producers/Metabo.png" width="155" height="55" alt="Metabo work. don't play">
           </a>
         </li>
       </ul>
@@ -327,13 +329,13 @@
       </p>
       <ul class="main-footer__social">
         <li>
-          <a class="main-footer__social-button">Вконтакте</a>
+          <a href="https://vk.com/" class="main-footer__social-button">Вконтакте</a>
         </li>
         <li>
-          <a class="main-footer__social-button"></a>Фейсбук</a>
+          <a href="https://www.facebook.com/" class="main-footer__social-button"></a>Фейсбук</a>
         </li>
         <li>
-          <a class="main-footer__social-button"></a>Инстаграм</a>
+          <a href="https://www.instagram.com" class="main-footer__social-button"></a>Инстаграм</a>
         </li>
       </ul>
       <p class="main-footer__feedback">
@@ -348,23 +350,23 @@
   </footer>
 
   <div class="modal modal__write-us">
-    <button class="modal__button-close"></button>
-    <form action="">
-      <label for="">Ваше имя
-        <input type="text">
+    <button class="modal__button-close">x</button>
+    <form class="modal__write-us-form" action="#">
+      <label for="write-us-name">Ваше имя
+        <input type="text" id="write-us-name">
       </label>
-      <label for="">Ваш e-mail
-        <input type="text">
+      <label for="write-us-email">Ваш e-mail
+        <input type="text" id="write-us-email">
       </label>
-      <label for="">Текст письма:
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+      <label for="write-us-text">Текст письма:
+        <textarea id="write-us-text" cols="30" rows="10"></textarea>
       </label>
       <button type="submit">Отправить</button>
     </form>
   </div>
 
   <div class="modal modal__map">
-    <button class="modal__button close"></button>
+    <button class="modal__button close">x</button>
   </div>
 </body>
 
