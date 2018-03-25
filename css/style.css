@@ -320,9 +320,9 @@ a {
 
   background-color: #63a63e;
 
-  -webkit-box-shadow: inset 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: inset 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0px -3px 1px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: inset 0px -3px 1px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px -3px 1px 0px rgba(0, 0, 0, 0.25);
 }
 
 .item-info__button_buy:hover {
@@ -331,6 +331,7 @@ a {
 
 .item-info__button_buy:active {
   background-color: #518534;
+  box-shadow: none;
 }
 
 .item-info__button_bookmarks {
