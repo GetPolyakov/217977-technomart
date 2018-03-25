@@ -15,7 +15,7 @@
     <div class="main-header__actions-wrapper">
       <div class="main-header__actions-container">
         <div class="main-header__actions">
-          <a class="logo">
+          <a class="logo" href="#">
             Техномарт
           </a>
           <form class="main-header__search" action="#" method="GET">
@@ -104,10 +104,10 @@
         <h2 class="catalog__title">Перфораторы</h2>
       </div>
       <form class="catalog__filter-form" name="filter-form" action="#" method="GET">
-        <fieldset class="catalog__filter-price">
           <div class="catalog__filter-header-wrapper">
             <h3 class="catalog__filter-title">Фильтер</h3>
           </div>
+        <fieldset class="catalog__filter-price">
           <legend class="catalog__filter-info">Цена:</legend>
           <label class="visually-hidden" for="filter-from">От</label>
           <input class="catalog__filter-from" id="filter-from" type="text">
@@ -115,7 +115,7 @@
           <input class="catalog__filter-to" id="filter-to" type="text">
         </fieldset>
         <fieldset class="catalog__filter-producers">
-          <legend>Производители</legend>
+          <legend class="catalog__filter-info">Производители</legend>
           <ul class="catalog__filter-producers-list">
             <li class="catalog__filter-producer-list-item">
               <input class="catalog__filter-producers-list-input" id="bosch" type="checkbox" name="bosch-producer">
@@ -140,7 +140,7 @@
           </ul>
         </fieldset>
         <fieldset class="catalog__filter-supply">
-          <legend>Питание</legend>
+          <legend class="catalog__filter-info">Питание</legend>
           <ul class="catalog__filter-supply-list">
             <li class="catalog__filter-supply-list-item">
               <input class="catalog__filter-supply-list-input" id="rechargeable" type="radio" name="supply">
@@ -399,10 +399,14 @@
   </footer>
 
   <div class="modal modal__add-to-cart">
-    <button class="modal__button close" aria-label="Закрыть всплывающее окно">x</button>
+    <div class="modal__upper-part">
+      <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
+    </div>
     <h2>Товар добавлен в корзину!</h2>
+    <button class="modal__button close" aria-label="Закрыть всплывающее окно">x</button>
     <a href="#" class="button-primary">Оформить заказ</a>
     <button class="button">Продолжить покупок</button>
+    </div>
   </div>
 </body>
 

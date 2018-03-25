@@ -370,23 +370,27 @@
     </div>
   </footer>
 
-  <div class="modal modal__write-us">
-    <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
-    <form class="modal__write-us-form" action="#" method="POST">
+  <div class="modal modal_write-us">
+    <div class="modal__upper-part">
+      <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
+    </div>
+    <form class="modal__form" action="#" method="POST">
       <label for="write-us-name">Ваше имя
-        <input id="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
+        <input class="modal__form-input" id="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
       </label>
       <label for="write-us-email">Ваш e-mail
-        <input id="write-us-email" type="text" placeholder="Для отправки ответа">
+        <input class="modal__form-input" id="write-us-email" type="text" placeholder="Для отправки ответа">
       </label>
       <label for="write-us-text">Текст письма:
         <textarea id="write-us-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </label>
-      <button class="button-primary" type="submit">Отправить</button>
+      <div class="modal__button-wrapper">
+        <button class="button-primary" type="submit">Отправить</button>
+      </div>
     </form>
   </div>
 
-  <div class="modal modal__map">
+  <div class="modal modal_map">
     <button class="modal__button close" aria-label="Закрыть всплывающее окно">x</button>
     <img src="img/map-popup.jpg" alt="Карта">
   </div>
