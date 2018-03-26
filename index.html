@@ -20,7 +20,7 @@
           </a>
           <form class="main-header__search" action="#" method="GET">
             <label class="visually-hidden" for="search-input">Поиск</label>
-            <input class="main-header__search-input" id="search-input" type="text" placeholder="Поиск">
+            <input class="main-header__search-input" id="search-input" type="text" placeholder="Поиск:">
           </form>
           <a class="main-header__actions-item main-header__actions-item_bookmarks" href="#">
             Закладки 0
@@ -52,28 +52,28 @@
           </li>
         </ul>
       </div>
-      <nav class="main-header__site-navigation">
-        <ul class="main-header__site-navigation-list">
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link">Главная</a>
+      <nav class="site-navigation">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link">Главная</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Компания</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Компания</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Каталог</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Каталог</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Новости</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Новости</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Спецпредложения</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Спецпредложения</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Доставка</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Доставка</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Контакты</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -240,7 +240,7 @@
       </p>
       <ul class="services__navigation">
         <li>
-          <button class="services__button services__button_active">Доставка</button>
+          <button class="services__button-active">Доставка</button>
         </li>
         <li>
           <button class="services__button">Гарантия</button>
@@ -370,21 +370,18 @@
     </div>
   </footer>
 
-  <div class="modal modal_write-us">
-    <div class="modal__upper-part">
+  <div class="modal-primary">
+    <div class="modal-primary__upper-part">
       <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
     </div>
-    <form class="modal__form" action="#" method="POST">
-      <label for="write-us-name">Ваше имя
-        <input class="modal__form-input" id="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
-      </label>
-      <label for="write-us-email">Ваш e-mail
-        <input class="modal__form-input" id="write-us-email" type="text" placeholder="Для отправки ответа">
-      </label>
-      <label for="write-us-text">Текст письма:
-        <textarea id="write-us-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-      </label>
-      <div class="modal__button-wrapper">
+    <form class="modal-primary__form" action="#" method="POST">
+      <label for="write-us-name">Ваше имя</label>
+      <input class="modal-primary__form-input" id="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
+      <label for="write-us-email">Ваш e-mail</label>
+      <input class="modal-primary__form-input" id="write-us-email" type="text" placeholder="Для отправки ответа">
+      <label for="write-us-text">Текст письма:</label>
+      <textarea id="write-us-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      <div class="modal-primary__button-wrapper">
         <button class="button-primary" type="submit">Отправить</button>
       </div>
     </form>

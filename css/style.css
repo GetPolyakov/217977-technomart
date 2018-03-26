@@ -45,7 +45,6 @@ a {
 
 .main-header__actions {
   font-size: 17px;
-  line-height: 18px;
 }
 
 .main-header__actions-item {
@@ -78,15 +77,26 @@ a {
   background-color: #293449;
 }
 
+.main-header__search-input:focus{
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.main-header__search-input::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  color: #ffffff;
+}
+
+
+.main-header__actions-item {
+  line-height: 18px;
+}
+
 .main-header__search-input:hover:not(:focus),
 .main-header__actions-item_bookmarks:hover,
 .main-header__actions-item_cart:hover {
   background-color: #212a3a;
-}
-
-.main-header__search-input:focus{
-  color: #000000;
-  background-color: #ffffff;
 }
 
 .main-header__actions-item_bookmarks:active,
@@ -128,7 +138,7 @@ a {
 
 .user-navigation,
 .user-navigation__authorized-list,
-.main-header__site-navigation-list {
+.site-navigation__list {
   margin: 0;
   padding: 0;
 
@@ -159,23 +169,23 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-header__site-navigation {
+.site-navigation {
   font-size: 17px;
   line-height: 17px;
+  color: #ffffff;
+}
+
+.site-navigation__list-link {
   color: #ffffff;
 
   background-color: #32425c;
 }
 
-.main-header__site-navigation-link {
-  color: #ffffff;
-}
-
-.main-header__site-navigation li:hover {
+.site-navigation__list-link:hover {
   background-color: #293449;
 }
 
-.main-header__site-navigation li:active {
+.site-navigation__list-link:active {
   color: rgba(255, 255, 255, 0.5);
 
   background-color: #1d2739;
@@ -224,6 +234,8 @@ a {
 .offers__button_machinery,
 .offers__button_discount,
 .offers__button_delivery {
+  text-transform: uppercase;
+
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -322,6 +334,7 @@ a {
 
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
 }
 
 .item-info__button_buy {
@@ -420,7 +433,11 @@ a {
   background-color: #293449;
 }
 
-.services__button_active {
+.services__button-active {
+  border: none;
+
+  font-size: 21px;
+  line-height: 30px;
   color: #293449;
 
   background-color: #ffffff;
@@ -550,9 +567,16 @@ a {
   color: #000000;
 }
 
-.catalog__sorting-param_active,
 .catalog__sorting-param:active {
-  border: none;
+  border-bottom: transparent;
+
+  color: #ee3643;
+}
+
+.catalog__sorting-param_active,
+.catatog__sorting-param_active:hover,
+.catalog__sorting-param_active:active {
+  border: transparent;
 
   color: #ee3643;
 }
@@ -568,6 +592,15 @@ a {
 .catalog__sorting-direction:active {
   color: #ee3643;
 }
+
+.catalog__sorting-direction_active,
+.catalog__sorting-direction_active:hover,
+.catalog__sorting-direction_active:active {
+  border: none;
+
+  color: #ee3643;
+}
+
 
 .goods-list,
 .catalog__pagination {
@@ -719,7 +752,7 @@ a {
 }
 
 /* Модалки */
-.modal_write-us {
+.modal-primary {
   border-top: 10px solid #ff5257;
 
   -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75); 
@@ -727,20 +760,20 @@ a {
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75); 
 }
 
-.modal__form label {
+.modal-primary__form label {
   font-size: 18px;
   line-height: 18px;
 }
 
-.modal__form-input {
+.modal-primary__form-input {
   border: 2px solid #d7dcde;
 }
 
-.modal__form-input:hover {
-  border-style: #b5b5b5;
+.modal-primary__form-input:hover {
+  border-color: #b5b5b5;
 }
 
-.modal__form-input:focus {
+.modal-primary__form-input:focus {
   outline: 2px solid #ee3643;
 }
 
@@ -755,8 +788,15 @@ a {
   box-shadow: 0px 0px 14.72px 1.28px rgba(0, 0, 0, 0.5); 
 }
 
-.modal__add-to-cart h2 {
+.modal-primary__add-to-cart h2 {
   font-size: 30px;
   line-height: 30px;
+}
 
+.modal-primary__button-continue {
+  border: none;
+
+  text-transform: uppercase;
+
+  background-color: #ffffff;
 }

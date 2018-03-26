@@ -20,7 +20,7 @@
           </a>
           <form class="main-header__search" action="#" method="GET">
             <label class="visually-hidden" for="search-input">Поиск</label>
-            <input id="search-input" class="main-header__search-input" type="text" placeholder="Поиск">
+            <input id="search-input" class="main-header__search-input" type="text" placeholder="Поиск:">
           </form>
           <a class="main-header__actions-item main-header__actions-item_bookmarks" href="#">
             Закладки 0
@@ -59,28 +59,28 @@
           </li>
         </ul>
       </div>
-      <nav class="main-header__site-navigation">
-        <ul class="main-header__site-navigation-list">
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link">Главная</a>
+      <nav class="site-navigation">
+        <ul class="site-navigation__list">
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link">Главная</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Компания</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Компания</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Каталог</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Каталог</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Новости</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Новости</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Спецпредложения</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Спецпредложения</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Доставка</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Доставка</a>
           </li>
-          <li class="main-header__site-navigation-list-item">
-            <a class="main-header__site-navigation-link" href="#">Контакты</a>
+          <li class="site-navigation__list-item">
+            <a class="site-navigation__list-link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -167,7 +167,7 @@
             <a class="catalog__sorting-param" href="#">По функциональности</a>
           </li>
           <li>
-            <a class="catalog__sorting-direction catalog__sorting-direction_active" href="#" aria-label="По возрастанию">⯅</a>
+            <a class="catalog__sorting-param catalog__sorting-direction_active" href="#" aria-label="По возрастанию">⯅</a>
           </li>
           <li>
             <a class="catalog__sorting-direction" href="#" aria-label="По убыванию">⯆</a>
@@ -398,14 +398,16 @@
     </div>
   </footer>
 
-  <div class="modal modal__add-to-cart">
-    <div class="modal__upper-part">
+  <div class="modal-primary">
+    <div class="modal-primary__upper-part">
       <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
     </div>
-    <h2>Товар добавлен в корзину!</h2>
-    <button class="modal__button close" aria-label="Закрыть всплывающее окно">x</button>
-    <a href="#" class="button-primary">Оформить заказ</a>
-    <button class="button">Продолжить покупок</button>
+    <div class="modal-primary__add-to-cart">
+      <h2>Товар добавлен в корзину!</h2>
+      <div class="modal-primary__button-wrapper">
+      <a href="#" class="button-primary">Оформить заказ</a>
+      <button class="modal-primary__button-continue">Продолжить покупок</button>
+      </div>
     </div>
   </div>
 </body>
