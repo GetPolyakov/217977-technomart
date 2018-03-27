@@ -574,7 +574,7 @@ a {
 }
 
 .catalog__sorting-param_active,
-.catatog__sorting-param_active:hover,
+.catalog__sorting-param_active:hover,
 .catalog__sorting-param_active:active {
   border: transparent;
 
