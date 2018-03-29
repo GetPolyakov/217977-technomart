@@ -119,14 +119,14 @@
               </div>
             </li>
           </ul>
-          <ul class="offers-other">
-            <li class="offers-other__item offers-other__item_discount">
-              <h3 class="offers-other__item-title">Скидка 50%</h3>
-              <a class="offers-other__button offers-other__button_discount" href="#">На 350 товаров</a>
+          <ul class="offers offers_column">
+            <li class="offers__item offers__item_discount">
+              <h3 class="offers__item-title">Скидка 50%</h3>
+              <a class="offers__button offers__button_discount" href="#">На 350 товаров</a>
             </li>
-            <li class="offers-other__item offers-other__item_delivery">
-              <h3 class="offers-other__item-title">Доставка</h3>
-              <a class="offers-other__button offers-other__button_delivery" href="#">Бесплатно</a>
+            <li class="offers__item offers__item_delivery">
+              <h3 class="offers__item-title">Доставка</h3>
+              <a class="offers__button offers__button_delivery" href="#">Бесплатно</a>
             </li>
           </ul>
         </div>
@@ -397,12 +397,22 @@
       <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
     </div>
     <form class="modal-primary__form" action="#" method="POST">
-      <label for="write-us-name">Ваше имя</label>
-      <input class="modal-primary__form-input" id="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
-      <label for="write-us-email">Ваш e-mail</label>
-      <input class="modal-primary__form-input" id="write-us-email" type="text" placeholder="Для отправки ответа">
-      <label for="write-us-text">Текст письма:</label>
-      <textarea id="write-us-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      <div class="modal-primary__content">
+        <div>
+        <p class="modal-primary__input-wrapper modal-primary__input-wrapper_name">
+          <label for="write-us-name">Ваше имя</label>
+          <input class="modal-primary__input" id="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
+        </p>
+        <p class="modal-primary__input-wrapper modal-primary__input-wrapper_email">
+          <label for="write-us-email">Ваш e-mail</label>
+          <input class="modal-primary__input" id="write-us-email" type="text" placeholder="Для отправки ответа">
+        </p>
+        </div>
+        <p class="modal-primary__input-wrapper modal-primary__input-wrapper_text">
+          <label for="write-us-text">Текст письма:</label>
+          <textarea class="modal-primary__text" id="write-us-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+        </p>
+      </div>
       <div class="modal-primary__button-wrapper">
         <button class="button-primary" type="submit">Отправить</button>
       </div>
@@ -411,7 +421,7 @@
 
   <div class="modal modal_map">
     <button class="modal__button close" aria-label="Закрыть всплывающее окно">x</button>
-    <img src="img/map-popup.jpg" alt="Карта">
+    <img src="img/map-popup.jpg" width="940" height="446" alt="Карта">
   </div>
 </body>
 
