@@ -20,12 +20,18 @@
         <form class="main-header__search-form" action="#" method="GET">
           <label class="visually-hidden" for="search-input">Поиск</label>
           <input class="main-header__search-input" id="search-input" type="text" placeholder="Поиск:">
+          <span class="main-header__search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+              <path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"
+              />
+            </svg>
+          </span>
         </form>
         <a class="main-header__actions-item main-header__actions-item_bookmarks" href="#">
           Закладки 0
         </a>
-        <a class="main-header__actions-item main-header__actions-item_cart" href="#">
-          Корзина 0
+        <a class="main-header__actions-item main-header__actions-item_cart main-header__actions-item_cart-active" href="#">
+          Корзина 10
         </a>
         <a class="main-header__actions-item main-header__actions-item_place-order" href="#">
           Оформить заказ
@@ -43,7 +49,24 @@
         </p>
         <ul class="user-navigation authorized-user">
           <li class="user-navigation__item">
-            <a class="user-navigation__button user-navigation__button_authorized">Равшан Джамшутович</a>
+            <a class="user-navigation__button user-navigation__button_authorized">
+              <span class="user-navigation__user-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+                  <path fill="#c5c5c5" d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"
+                  />
+                </svg>
+              </span>
+              Равшан Джамшутович
+              <span class="user-navigation__logout-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+                  <g fill="#c5c5c5">
+                    <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
+                    <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"
+                    />
+                  </g>
+                </svg>
+              </span>
+            </a>
           </li>
           <li class="user-navigation__item">
             <ul class="user-navigation__authorized-list">
@@ -88,13 +111,13 @@
     <div class="main-container">
       <h1 class="visually-hidden">Каталог товаров</h1>
       <ul class="breadcrumbs">
-        <li>
+        <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="#">Каталог</a>
         </li>
-        <li>
+        <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="#">Инструмент</a>
         </li>
-        <li>
+        <li class="breadcrumbs-item">
           <a class="breadcrumbs-link">Перфораторы</a>
         </li>
       </ul>
@@ -105,60 +128,63 @@
         <div class="catalog__column">
           <form class="catalog__filter-form" name="filter-form" action="#" method="GET">
             <div class="catalog__filter-header-wrapper">
-              <h3 class="catalog__filter-title">Фильтер</h3>
+              <h3 class="catalog__filter-title">Фильтр:</h3>
             </div>
             <fieldset class="catalog__filter-price">
               <legend class="catalog__filter-info catalog__filter-info_price">Цена:</legend>
+              <div class="catalog__filter-range">
+                <div class="catalog__filter-toggle catalog__filter-toggle-left"></div>
+                <div class="catalog__filter-scale">
+                  <div class="catalog__filter-bar"></div>
+                </div>
+                <div class="catalog__filter-toggle catalog__filter-toggle-right"></div>
+              </div>
               <div class="catalog__filter-inputs-wrapper">
                 <label class="visually-hidden" for="filter-from">От</label>
                 <input class="catalog__filter-input catalog__filter-from" id="filter-from" type="text">
-                <span>-</span>
+                <span class="catalog__filter-dash">—</span>
                 <label class="visually-hidden" for="filter-to">До</label>
                 <input class="catalog__filter-input catalog__filter-to" id="filter-to" type="text">
               </div>
             </fieldset>
-            <div class="catalog__temp-div">
               <fieldset class="catalog__filter-producers">
                 <legend class="catalog__filter-info catalog__filter-info_producers">Производители</legend>
                 <ul class="catalog__filter-producers-list">
-                  <li class="catalog__filter-producer-list-item">
+                  <li class="catalog__filter-producers-list-item">
                     <input class="catalog__filter-producers-list-input" id="bosch" type="checkbox" name="bosch-producer">
-                    <label class="catalog__filter-producers-list-name" for="bosch">Bosch</label>
+                    <label class="catalog__filter-producers-list-name catalog__filter-producers-bosch" for="bosch">Bosch</label>
                   </li>
-                  <li class="catalog__filter-producer-list-item">
+                  <li class="catalog__filter-producers-list-item">
                     <input class="catalog__filter-producers-list-input" id="interscol" type="checkbox" name="interskol-producer">
-                    <label class="catalog__filter-producers-list-name" for="interscol">Интерскол</label>
+                    <label class="catalog__filter-producers-list-name catalog__filter-producers-interscol" for="interscol">Интерскол</label>
                   </li>
-                  <li class="catalog__filter-producer-list-item">
+                  <li class="catalog__filter-producers-list-item">
                     <input class="catalog__filter-producers-list-input" id="makita" type="checkbox" name="makita-producer">
-                    <label class="catalog__filter-producers-list-name" for="makita">Makita</label>
+                    <label class="catalog__filter-producers-list-name catalog__filter-producers-makita" for="makita">Makita</label>
                   </li>
-                  <li class="catalog__filter-producer-list-item">
+                  <li class="catalog__filter-producers-list-item">
                     <input class="catalog__filter-producers-list-input" id="dewalt" type="checkbox" name="dewalt-producer">
-                    <label class="catalog__filter-producers-list-name" for="dewalt">Dewalt</label>
+                    <label class="catalog__filter-producers-list-name catalog__filter-producers-dewalt" for="dewalt">Dewalt</label>
                   </li>
-                  <li class="catalog__filter-producer-list-item">
+                  <li class="catalog__filter-producers-list-item">
                     <input class="catalog__filter-producers-list-input" id="hitachi" type="checkbox" name="hitachi-producer" disabled>
-                    <label class="catalog__filter-producers-list-name" for="hitachi">Hitachi</label>
+                    <label class="catalog__filter-producers-list-name catalog__filter-producers-hitachi" for="hitachi">Hitachi</label>
                   </li>
                 </ul>
               </fieldset>
-            </div>
-            <div class="catalog__temp-div">
               <fieldset class="catalog__filter-supply">
                 <legend class="catalog__filter-info catalog__filter-info_supply">Питание</legend>
                 <ul class="catalog__filter-supply-list">
                   <li class="catalog__filter-supply-list-item">
                     <input class="catalog__filter-supply-list-input" id="rechargeable" type="radio" name="supply">
-                    <label class="catalog__filter-supply-list-name" for="rechargeable">Аккумуляторные</label>
+                    <label class="catalog__filter-supply-list-name catalog__filter-supply-rechargeable" for="rechargeable">Аккумуляторные</label>
                   </li>
                   <li class="catalog__filter-supply-list-item">
                     <input class="catalog__filter-supply-list-input" id="network" type="radio" name="supply" disabled>
-                    <label class="catalog__filter-supply-list-name" for="network">Сетевые</label>
+                    <label class="catalog__filter-supply-list-name catalog__filter-supply-network" for="network">Сетевые</label>
                   </li>
                 </ul>
               </fieldset>
-            </div>
             <button class="catalog__filter-button" type="submit">Показать</button>
           </form>
           <div class="catalog__inner-column">
@@ -172,24 +198,26 @@
                   <a class="catalog__sorting-param" href="#">По типу</a>
                 </li>
                 <li>
-                  <a class="catalog__sorting-param" href="#">По функциональности</a>
+                  <a class="catalog__sorting-param" href="#">По функционалу</a>
                 </li>
-                <li>
-                  <a class="catalog__sorting-param catalog__sorting-direction_active" href="#" aria-label="По возрастанию">⯅</a>
-                </li>
-                <li>
-                  <a class="catalog__sorting-direction" href="#" aria-label="По убыванию">⯆</a>
-                </li>
+                <div class="catalog__sorting-directions">
+                  <li>
+                    <a class="catalog__sorting-param catalog__sorting-direction_active" href="#" aria-label="По возрастанию">&#x25BC;</a>
+                  </li>
+                  <li>
+                    <a class="catalog__sorting-direction" href="#" aria-label="По убыванию">&#x25B2;</a>
+                  </li>
+                </div>
               </ul>
             </section>
             <div class="catalog__goods">
               <ul class="goods-list">
-                <li class="item-info">
+                <li class="item-info item-info_inner">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
                   </div>
-                  <div class="item-info__main">
+                  <div class="item-info__main item-info_inner">
                     <img class="item-info__pic" src="img/goods/bosch-bfg-3000.jpg" width="220" height="159" alt="BOSCH BFG 3000">
                     <h3 class="item-info__title">Перфоратор BOSCH BFG 3000</h3>
                     <del class="item-info__old-price">22 500р</del>
@@ -198,7 +226,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -212,7 +240,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner item-info_new">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -225,7 +253,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -239,7 +267,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner item-info_new">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -253,7 +281,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -266,7 +294,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner item-info_new">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -280,7 +308,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -294,7 +322,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-info">
+                <li class="item-info item-info_inner">
                   <div class="item-info__actions">
                     <button class="item-info__button item-info__button_buy">Купить</button>
                     <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -311,7 +339,7 @@
             </div>
             <ul class="catalog__pagination">
               <li>
-                <a class="catalog__pagination-button-active" href="#">1</a>
+                <a class="catalog__pagination-button catalog__pagination-button_active" href="#">1</a>
               </li>
               <li>
                 <a class="catalog__pagination-button" href="#">2</a>
@@ -320,7 +348,7 @@
                 <a class="catalog__pagination-button" href="#">3</a>
               </li>
               <li>
-                <a class="catalog__pagination-button" href="#">Следующая</a>
+                <a class="catalog__pagination-button catalog__pagination-button_next" href="#">Следующая</a>
               </li>
             </ul>
           </div>
@@ -328,13 +356,13 @@
     </div>
     <article class="item-article">
       <div class="item-article__container">
-      <h2 class="item-article__title">Пара слов о перфораторах</h2>
-      <p class="item-article__description">
-        Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и
-        камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-        шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены
-        отбойный молоток и ударная дрель.
-      </p>
+        <h2 class="item-article__title">Пара слов о перфораторах</h2>
+        <p class="item-article__description">
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и
+          камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
+          дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
+          совмещены отбойный молоток и ударная дрель.
+        </p>
       </div>
     </article>
   </main>
@@ -394,13 +422,13 @@
         </p>
         <ul class="main-footer__social">
           <li>
-            <a class="main-footer__social-button" href="https://vk.com" aria-label="Вконтакте"></a>
+            <a class="main-footer__social-button main-footer__social-button_vk" href="https://vk.com" aria-label="Вконтакте"></a>
           </li>
           <li>
-            <a class="main-footer__social-button" href="https://www.facebook.com" aria-label="Фейсбук"></a>
+            <a class="main-footer__social-button main-footer__social-button_fb" href="https://www.facebook.com" aria-label="Фейсбук"></a>
           </li>
           <li>
-            <a class="main-footer__social-button" href="https://www.instagram.com" aria-label="Инстаграм"></a>
+            <a class="main-footer__social-button main-footer__social-button_inst" href="https://www.instagram.com" aria-label="Инстаграм"></a>
           </li>
         </ul>
         <p class="main-footer__feedback">
@@ -415,14 +443,15 @@
     </div>
   </footer>
 
-  <div class="modal-primary cart">
+  <div class="modal-primary">
     <div class="modal-primary__upper-part">
       <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
     </div>
     <div class="modal-primary__cart">
+      <span class="modal-primary__cart-ok"></span>
       <h2 class="modal-primary__cart-title">Товар добавлен в корзину!</h2>
       <div class="modal-primary__button-wrapper">
-        <a href="#" class="button-primary">Оформить заказ</a>
+        <a href="#" class="button-primary button-primary_cart">Оформить заказ</a>
         <button class="modal-primary__button-continue">Продолжить покупок</button>
       </div>
     </div>
@@ -430,4 +459,3 @@
 </body>
 
 </html>
-

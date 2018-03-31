@@ -20,6 +20,9 @@
         <form class="main-header__search-form" action="#" method="GET">
           <label class="visually-hidden" for="search-input">Поиск</label>
           <input class="main-header__search-input" id="search-input" type="text" placeholder="Поиск:">
+          <span class="main-header__search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/></svg>
+          </span>
         </form>
         <a class="main-header__actions-item main-header__actions-item_bookmarks" href="#">
           Закладки 0
@@ -43,10 +46,15 @@
         </p>
         <ul class="user-navigation">
           <li class="user-navigation__item">
-            <a class="user-navigation__button user-navigation__button_unauthorized" href="#">Вход</a>
+            <a class="user-navigation__button user-navigation__button_login user-navigation__button_unauthorized" href="#">
+              <span class="user-navigation__login-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z"/><path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z"/></svg>
+              </span>
+              Вход
+            </a>
           </li>
           <li class="user-navigation__item">
-            <a class="user-navigation__button user-navigation__button_unauthorized" href="#">Регистрация</a>
+            <a class="user-navigation__button user-navigation__button_register user-navigation__button_unauthorized" href="#">Регистрация</a>
           </li>
         </ul>
       </div>
@@ -103,9 +111,11 @@
                 <span class="slider__slide-title">Дрели</span>
                 <span class="slider__slide-description">Соседям на радость</span>
               </div>
+              <span class="slider__arrow-left"></span>
               <img src="img/slider/Drills.jpg" width="620" height="266" alt="Дрели">
+              <span class="slider__arrow-right"></span>
               <div class="slider__button-wrapper">
-                <a class="button-primary" href="inner.html">Открыть каталог</a>
+                <a class="button-primary button-primary_slider" href="inner.html">Открыть каталог</a>
               </div>
             </li>
             <li class="slider__item" style="display: none;">
@@ -115,7 +125,7 @@
               </div>
               <img src="img/slider/Punchers.jpg" width="620" height="266" alt="Перфораторы">
               <div class="slider__button-wrapper">
-                <a class="button-primary" href="inner.html">Открыть каталог</a>
+                <a class="button-primary button-primary_slider" href="inner.html">Открыть каталог</a>
               </div>
             </li>
           </ul>
@@ -134,7 +144,7 @@
       <section class="popular-goods">
         <div class="popular">
           <h2 class="popular__title">Популярные товары</h2>
-          <a class="button-primary" href="#">Все популярные товары</a>
+          <a class="button-primary button-primary_popular" href="#">Все популярные товары</a>
         </div>
         <ul class="goods-list">
           <li class="item-info">
@@ -179,7 +189,7 @@
               </div>
             </div>
           </li>
-          <li class="item-info">
+          <li class="item-info item-info_new">
             <div class="item-info__actions">
               <button class="item-info__button item-info__button_buy">Купить</button>
               <button class="item-info__button item-info__button_bookmarks">Закладки</button>
@@ -197,7 +207,7 @@
       <section class="popular-producers">
         <div class="popular">
           <h2 class="popular__title">Популярные производители</h2>
-          <a class="button-primary" href="#">Все производители</a>
+          <a class="button-primary button-primary_popular" href="#">Все производители</a>
         </div>
         <ul class="popular-producers__list">
           <li class="popular-producers__list-item">
@@ -253,7 +263,7 @@
         <div class="services__wrapper">
           <ul class="services__navigation">
             <li>
-              <button class="services__button-active">Доставка</button>
+              <button class="services__button services__button_active">Доставка</button>
             </li>
             <li>
               <button class="services__button">Гарантия</button>
@@ -263,26 +273,26 @@
             </li>
           </ul>
           <section class="services__info services__info_delivery">
-            <h3 class="services__sub-title">Доставка</h3>
-            <p class="services__description">
+            <h3 class="services__info-sub-title">Доставка</h3>
+            <p class="services__info-description">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы не плохо заработаем, поднимая
               его на ваш этаж!
             </p>
           </section>
           <section class="services__info services__info_guarantee" style="display: none;">
-            <h3 class="services__sub-title">Гарантия</h3>
-            <p class="services__description">
+            <h3 class="services__info-sub-title">Гарантия</h3>
+            <p class="services__info-description">
               Если купленный у нас товар поломается или заискрит, а также в случае пожара, спровоцированного его возгаранием, вы всегда
               можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь
               сами.
             </p>
           </section>
           <section class="services__info services__info_credit" style="display: none;">
-            <h3 class="services__sub-title">Кредит</h3>
-            <p class="services__description">
+            <h3 class="services__info-sub-title">Кредит</h3>
+            <p class="services__info-description">
               Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
             </p>
-            <button class="button-primary">Оставить заявку</button>
+            <button class="button-primary button-primary_credit">Оставить заявку</button>
           </section>
         </div>
     </section>
@@ -291,27 +301,27 @@
       <div class="about-company__container">
         <section class="about-company__info">
           <h2 class="about-company__info-title">Компания &#171;Техномарт&#187;</h2>
-          <p class="about-company__info-description">
+          <p class="about-company__info-description about-company__info-description_tagline">
             Настоящий мужской шопинг начинается здесь! Огромный выбор товаро для ремонта и строительства не оставит равнодушными любителей
             сэкономить на гастарбайтерах.
           </p>
-          <p class="about-company__info-description">
+          <p class="about-company__info-description about-company__info-description_delivery">
             Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
           </p>
           <ul class="about-company__carriers-list">
-            <li>Деловые линии</li>
-            <li>Автотрейдинг</li>
-            <li>ЖелДорЭкспедиция</li>
+            <li class="about-company__carriers-list-item">Деловые линии</li>
+            <li class="about-company__carriers-list-item">Автотрейдинг</li>
+            <li class="about-company__carriers-list-item">ЖелДорЭкспедиция</li>
           </ul>
-          <a class="button-primary" href="#">Подробнее о компании</a>
+          <a class="button-primary button-primary_carriers-list" href="#">Подробнее о компании</a>
         </section>
         <section class="about-company__contacts">
           <h2 class="about-company__contacts-title">Контакты</h2>
           <p class="about-company__contacts-description">Вы можите забрать товар сами, заехав в наш офис:</p>
-          <a href="https://yandex.ru/maps">
+          <a class="about-company__contacts-map" href="https://yandex.ru/maps">
             <img src="img/contacts-map.png" width="300" height="158" alt="Большая Конюшенная ул., 19">
           </a>
-          <a class="button-primary" href="#">Заблудились?Напишите нам!</a>
+          <a class="button-primary button-primary_contacts" href="#">Заблудились? Напишите нам!</a>
         </section>
       </div>
     </div>
@@ -371,13 +381,19 @@
         </p>
         <ul class="main-footer__social">
           <li>
-            <a class="main-footer__social-button" href="https://vk.com" aria-label="Вконтакте"></a>
+            <a class="main-footer__social-button main-footer__social-button_vk" href="https://vk.com">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
           <li>
-            <a class="main-footer__social-button" href="https://www.facebook.com" aria-label="Фейсбук"></a>
+            <a class="main-footer__social-button main-footer__social-button_fb" href="https://www.facebook.com">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
           </li>
           <li>
-            <a class="main-footer__social-button" href="https://www.instagram.com" aria-label="Инстаграм"></a>
+            <a class="main-footer__social-button main-footer__social-button_inst" href="https://www.instagram.com">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
           </li>
         </ul>
         <p class="main-footer__feedback">
