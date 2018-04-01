@@ -2201,6 +2201,7 @@ input[type="radio"].visually-hidden {
 
 .modal-primary {
   width: 620px;
+  display: none;
 
   -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.75);
@@ -2328,6 +2329,7 @@ input[type="radio"].visually-hidden {
 }
 .modal_map {
   position: relative;
+  display: none;
 
   width: 940px;
   height: 446px;
