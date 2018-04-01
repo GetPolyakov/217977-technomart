@@ -1971,7 +1971,7 @@ input[type="radio"].visually-hidden {
 }
 
 .item-article__description_last {
-  margin-bottom: 69px;
+  padding-bottom: 69px;
 }
 /* Футер */
 
