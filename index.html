@@ -408,7 +408,7 @@
     </div>
   </footer>
 
-  <div class="modal-primary write-us">
+  <div class="modal-primary">
     <div class="modal-primary__upper-part">
       <button class="modal__button-close" aria-label="Закрыть всплывающее окно">x</button>
     </div>
@@ -416,27 +416,27 @@
       <div class="modal-primary__content">
         <div>
         <p class="modal-primary__input-wrapper modal-primary__input-wrapper_name">
-          <label for="write-us-name">Ваше имя</label>
+          <label for="write-us-name">Ваше имя:</label>
           <input class="modal-primary__input" id="write-us-name" type="text" placeholder="Представьтесь, пожалуйста">
         </p>
         <p class="modal-primary__input-wrapper modal-primary__input-wrapper_email">
-          <label for="write-us-email">Ваш e-mail</label>
+          <label for="write-us-email">Ваш e-mail:</label>
           <input class="modal-primary__input" id="write-us-email" type="text" placeholder="Для отправки ответа">
         </p>
         </div>
         <p class="modal-primary__input-wrapper modal-primary__input-wrapper_text">
-          <label for="write-us-text">Текст письма:</label>
+          <label class="modal-primary__text-label" for="write-us-text">Текст письма:</label>
           <textarea class="modal-primary__text" id="write-us-text" cols="30" rows="10" placeholder="В свободной форме"></textarea>
         </p>
       </div>
       <div class="modal-primary__button-wrapper">
-        <button class="button-primary" type="submit">Отправить</button>
+        <button class="button-primary button-primary_write-us" type="submit">Отправить</button>
       </div>
     </form>
   </div>
 
   <div class="modal modal_map">
-    <button class="modal__button close" aria-label="Закрыть всплывающее окно">x</button>
+      <button class="modal__button-close modal_button-close_map" aria-label="Закрыть всплывающее окно">x</button>
     <img src="img/map-popup.jpg" width="940" height="446" alt="Карта">
   </div>
 </body>
